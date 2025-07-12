@@ -1,0 +1,10 @@
+@{
+    ViewData["Title"] = "Yetkisiz Erişim";
+    var previousUrl = TempData["PreviousUrl"] ?? Url.Action("Index", "Home"); // Önceki URL veya Home
+}
+
+<div class="text-center mt-5">
+    <h1 class="display-4 text-danger">403 - Yetkisiz Erişim</h1>
+    <p class="lead">Bu profile erişim izniniz bulunmamaktadır.</p>
+    <a class="btn btn-primary" href="@previousUrl">Geri Dön</a>
+</div>

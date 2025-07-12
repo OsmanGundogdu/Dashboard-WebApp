@@ -1,0 +1,15 @@
+@model DashBoardWebApp.Models.Message
+
+<h2>Yeni Mesaj Gönder</h2>
+
+<form asp-action="SendMessage" method="post">
+    <div class="form-group">
+        <label for="ReceiverID">Alıcı ID</label>
+        <input type="number" class="form-control" id="ReceiverID" name="ReceiverID" required>
+    </div>
+    <div class="form-group">
+        <label for="MessageText">Mesaj</label>
+        <textarea class="form-control" id="MessageText" name="MessageText" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Gönder</button>
+</form>

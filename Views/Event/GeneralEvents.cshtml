@@ -1,0 +1,59 @@
+@using System.Security.Claims
+@model IEnumerable<DashBoardWebApp.Models.Etkinlik>
+
+<h2>Genel Etkinlikler</h2>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert @(TempData["MessageClass"] ?? "alert-info") mt-3">
+        <p>@Html.Raw(TempData["Message"])</p>
+    </div>
+}
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Ad</th>
+            <th>Tarih</th>
+            <th>Saat</th>
+            <th>Konum</th>
+            <th>Kategori</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var etkinlik in Model)
+        {
+            <tr>
+                <td>@etkinlik.EventName</td>
+                <td>@etkinlik.Date.ToString("yyyy-MM-dd")</td>
+                <td>@etkinlik.Time.ToString(@"hh\:mm")</td>
+                <td>@etkinlik.Location</td>
+                <td>@etkinlik.Category</td>
+                <td>
+                    @if (etkinlik.CreatorID == int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)))
+                    {
+                        <!-- Kendi etkinliğimiz, Katıl butonunu gösterme -->
+                        <span class="badge bg-info">Kendi Etkinliğiniz</span>
+                    }
+                    else
+                    {
+                        <!-- Kendi etkinliğimiz değil, Katıl butonunu göster -->
+                        <a href="@Url.Action("JoinEventWithAlternatives", "Kullanici", new { eventId = etkinlik.ID, returnUrl = "GeneralEvents" })"
+                        class="btn btn-sm btn-primary">
+                            Katıl
+                        </a>
+                    }
+                </td>
+                <td>
+                    <a href="@Url.Action("ShowChat", "Message", new { eventId = etkinlik.ID })" class="btn btn-sm btn-info">Mesajlaş</a>
+                </td>
+                <td>
+                    <!-- Detaylar butonu -->
+                    <a href="@Url.Action("ShowEventDetails", "Event", new { id = etkinlik.ID })" class="btn btn-sm btn-info">Detaylar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

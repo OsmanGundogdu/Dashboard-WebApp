@@ -1,0 +1,33 @@
+<h2>Etkinlik Haritası</h2>
+
+<div id="map" style="height: 600px; width: 100%;"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+<script>
+    function initMap() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 10,
+            center: { lat: 39.92077, lng: 32.85411 }, // Örnek: Ankara'nın koordinatları
+        });
+
+        const events = @Html.Raw(Json.Serialize(Model)); // Tüm etkinlik verileri JSON formatında gönderilir
+
+        events.forEach(event => {
+            const marker = new google.maps.Marker({
+                position: { lat: event.Latitude, lng: event.Longitude },
+                map: map,
+                title: event.EventName,
+            });
+
+            const infoWindow = new google.maps.InfoWindow({
+                content: `<h5>${event.EventName}</h5><p>${event.Description}</p>`,
+            });
+
+            marker.addListener("click", () => {
+                infoWindow.open(map, marker);
+            });
+        });
+    }
+
+    window.onload = initMap;
+</script>

@@ -1,0 +1,21 @@
+@model IEnumerable<DashBoardWebApp.Models.Participant>
+
+<h2>Etkinliğe Katılanlar</h2>
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th>Kullanıcı ID</th>
+            <th>Etkinlik ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var participant in Model)
+        {
+            <tr>
+                <td>@participant.UserID</td>
+                <td>@participant.EventID</td>
+            </tr>
+        }
+    </tbody>
+</table>

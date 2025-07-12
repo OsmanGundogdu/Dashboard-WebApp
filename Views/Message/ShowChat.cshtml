@@ -1,0 +1,23 @@
+@model DashBoardWebApp.Models.ChatViewModel
+
+<h2>Mesajlaşma Paneli: @Model.EventName</h2>
+
+<div class="chat-box border p-3 mt-3" style="height: 300px; overflow-y: auto;">
+    @foreach (var message in Model.Messages)
+    {
+        <div class="mb-2">
+            <strong>@message.SenderName</strong>
+            <span class="text-muted" style="font-size: 0.9em;">(@message.SentTime.ToString("yyyy-MM-dd HH:mm"))</span>
+            <p>@message.MessageText</p>
+        </div>
+    }
+</div>
+
+<form method="post" action="@Url.Action("SendMessage", "Message")" class="mt-3">
+    <input type="hidden" name="eventId" value="@Model.EventID" />
+    <div class="input-group">
+        <input type="text" name="messageText" class="form-control" placeholder="Mesajınızı yazın..." required />
+        <button type="submit" class="btn btn-primary">Gönder</button>
+    </div>
+</form>
+<a href="@Url.Action("GeneralEvents", "Event")" class="btn btn-secondary mt-3">Geri Dön</a>

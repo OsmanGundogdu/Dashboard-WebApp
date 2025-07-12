@@ -1,0 +1,40 @@
+<h2>Etkinlik Oluştur</h2>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-warning mt-3">
+        @TempData["Message"]
+    </div>
+}
+
+<form method="post" asp-action="CreateEvent">
+    <div class="form-group">
+        <label for="EventName">Etkinlik Adı</label>
+        <input type="text" class="form-control" id="EventName" name="EventName" required />
+    </div>
+    <div class="form-group">
+        <label for="Description">Açıklama</label>
+        <textarea class="form-control" id="Description" name="Description"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="Date">Tarih</label>
+        <input type="date" class="form-control" id="Date" name="Date" required />
+    </div>
+    <div class="form-group">
+        <label for="Time">Saat</label>
+        <input type="time" class="form-control" id="Time" name="Time" required />
+    </div>
+    <div class="form-group">
+        <label for="Duration">Süre (dakika)</label>
+        <input type="number" class="form-control" id="Duration" name="Duration" required />
+    </div>
+    <div class="form-group">
+        <label for="Location">Konum</label>
+        <input type="text" class="form-control" id="Location" name="Location" />
+    </div>
+    <div class="form-group">
+        <label for="Category">Kategori</label>
+        <input type="text" class="form-control" id="Category" name="Category" />
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Oluştur</button>
+</form>

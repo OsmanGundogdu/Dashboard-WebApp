@@ -1,0 +1,40 @@
+@model IEnumerable<DashBoardWebApp.Models.Etkinlik>
+
+<h2>Etkinlikler Listesi</h2>
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th>Etkinlik Adı</th>
+            <th>Açıklama</th>
+            <th>Tarih</th>
+            <th>Saat</th>
+            <th>Süre (dk)</th>
+            <th>Konum</th>
+            <th>Kategori</th>
+            <th>Katıl</th> <!-- Yeni Katıl butonu sütunu -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var etkinlik in Model)
+        {
+            <tr>
+                <td>@etkinlik.EventName</td>
+                <td>@etkinlik.Description</td>
+                <td>@etkinlik.Date.ToString("yyyy-MM-dd")</td>
+                <td>@etkinlik.Time</td>
+                <td>@etkinlik.Duration</td>
+                <td>@etkinlik.Location</td>
+                <td>@etkinlik.Category</td>
+                <td>
+                    <!-- Katıl Butonu -->
+                    <form asp-controller="Participant" asp-action="JoinEvent" method="post">
+                        <input type="hidden" name="userId" value="1" /> <!-- Kullanıcı ID'sini burada dinamik yapabilirsin -->
+                        <input type="hidden" name="eventId" value="@etkinlik.ID" />
+                        <button type="submit" class="btn btn-primary">Katıl</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

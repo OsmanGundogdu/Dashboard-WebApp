@@ -1,0 +1,155 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = DashBoardWebApp
+build_property.RootNamespace = DashBoardWebApp
+build_property.ProjectDir = C:\Users\osman1\Desktop\Programlama\Yazlab\2\DashBoardWebApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\osman1\Desktop\Programlama\Yazlab\2\DashBoardWebApp
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Event/CreateEvent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcQ3JlYXRlRXZlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Event/EditEvent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcRWRpdEV2ZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Event/EventConflict.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcRXZlbnRDb25mbGljdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Event/GeneralEvents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcR2VuZXJhbEV2ZW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Event/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Event/ManageEvents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcTWFuYWdlRXZlbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Event/MapEvents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcTWFwRXZlbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Event/MyEvents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcTXlFdmVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Event/Recommendations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcUmVjb21tZW5kYXRpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Event/ShowEventDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcU2hvd0V2ZW50RGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Event/ShowJoinedEvents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcU2hvd0pvaW5lZEV2ZW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Home/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Kullanici/AdminPanel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXEFkbWluUGFuZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Kullanici/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXEVkaXRQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Kullanici/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXEVkaXRVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Kullanici/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXEZvcmdvdFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Kullanici/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Kullanici/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Kullanici/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXFJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Kullanici/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXFJlc2V0UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Kullanici/ShowUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXFNob3dVc2Vycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Kullanici/VerifyCode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXFZlcmlmeUNvZGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Message/Inbox.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzc2FnZVxJbmJveC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Message/SendMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzc2FnZVxTZW5kTWVzc2FnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Message/ShowChat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzc2FnZVxTaG93Q2hhdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Participant/EventParticipants.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGljaXBhbnRcRXZlbnRQYXJ0aWNpcGFudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Score/AddScore.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NvcmVcQWRkU2NvcmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Score/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NvcmVcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/osman1/Desktop/Programlama/Yazlab/2/DashBoardWebApp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-n1pa1d7qn9

@@ -1,0 +1,39 @@
+@model IEnumerable<DashBoardWebApp.Models.Kullanici>
+
+<h2>Kullanıcılar</h2>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success mt-3">
+        @TempData["Message"]
+    </div>
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Kullanıcı Adı</th>
+            <th>E-posta</th>
+            <th>Rol</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var kullanici in Model)
+        {
+            <tr>
+                <td>@kullanici.Ad</td>
+                <td>@kullanici.Soyad</td>
+                <td>@kullanici.KullaniciAdi</td>
+                <td>@kullanici.Eposta</td>
+                <td>@kullanici.Role</td>
+                <td>
+                    <a href="@Url.Action("EditUser", "Kullanici", new { id = kullanici.ID })" class="btn btn-sm btn-warning">Düzenle</a>
+                    <a href="@Url.Action("DeleteUser", "Kullanici", new { id = kullanici.ID })" class="btn btn-sm btn-danger" onclick="return confirm('Kullanıcıyı silerseniz ilgili etkinlikler de silinecektir! Silmek istediğinizden emin misiniz?')">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

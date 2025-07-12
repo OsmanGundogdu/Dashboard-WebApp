@@ -1,0 +1,68 @@
+@model DashBoardWebApp.Models.Kullanici
+
+<h2>Profilim</h2>
+
+<div class="card mt-3">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-3">
+                @if (!string.IsNullOrEmpty(Model.ProfilFotografi))
+                {
+                    <img src="@Model.ProfilFotografi" alt="Profil Fotoğrafı" class="img-fluid rounded-circle" style="width: 200px; height: 200px; margin-top: 25px;; margin-left: 25px;">
+                }
+                else
+                {
+                    <img src="https://via.placeholder.com/150" alt="Profil Fotoğrafı" class="img-fluid rounded-circle" style="width: 200px; height: 200px; margin-top: 25px;; margin-left: 25px;">
+                }
+            </div>
+            <div class="col-md-6">
+                <h5 class="card-title">Kullanıcı Adı: @Model.KullaniciAdi</h5>
+                <p class="card-text"><strong>E-posta :</strong> @Model.Eposta</p>
+                <p class="card-text"><strong>Konum :</strong> @Model.Konum</p>
+                <p class="card-text"><strong>İlgi Alanları :</strong> @Model.IlgiAlanlari</p>
+                <p class="card-text"><strong>Doğum Tarihi :</strong> @Model.DogumTarihi?.ToString("yyyy-MM-dd")</p>
+                <p class="card-text"><strong>Cinsiyet :</strong> @Model.Cinsiyet</p>
+                <p class="card-text"><strong>Telefon Numarası :</strong> @Model.TelefonNumarasi</p>
+            </div>
+            <div class="col-md-2">
+                <div class="mt-5">
+                    <a class="btn btn-danger" href="@Url.Action("ResetPassword", "Kullanici")" style="padding: 10px 20px; font-size: 16px;">
+                        Şifre Değiştir
+                    </a>
+                </div>
+                <div class="mt-5">
+                    <a class="btn btn-primary" href="@Url.Action("EditProfile", "Kullanici", new { id = Model.ID })">
+                        <i class="fas fa-pencil-alt"></i> Profil Düzenle
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card mt-3">
+    <div class="card-header">Kazanılan Puanlar</div>
+    <div class="card-body">
+        <p><strong>Toplam Puan:</strong> @Model.TotalPoints</p>
+        <h5>Detaylı Puan Bilgisi</h5>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Etkinlik Adı</th>
+                    <th>Puan</th>
+                    <th>Tarih</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var point in Model.EarnedPoints)
+                {
+                    <tr>
+                        <td>@point.EventName</td>
+                        <td>@point.Points</td>
+                        <td>@point.EarnedDate.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

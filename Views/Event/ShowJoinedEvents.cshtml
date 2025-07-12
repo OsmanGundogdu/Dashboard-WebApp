@@ -1,0 +1,34 @@
+@model IEnumerable<DashBoardWebApp.Models.Etkinlik>
+
+<h2>Katıldığım Etkinlikler</h2>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">Henüz katıldığınız bir etkinlik yok.</div>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Etkinlik Adı</th>
+                <th>Tarih</th>
+                <th>Saat</th>
+                <th>Konum</th>
+                <th>Kategori</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var etkinlik in Model)
+            {
+                <tr>
+                    <td>@etkinlik.EventName</td>
+                    <td>@etkinlik.Date.ToString("yyyy-MM-dd")</td>
+                    <td>@etkinlik.Time.ToString(@"hh\:mm")</td>
+                    <td>@etkinlik.Location</td>
+                    <td>@etkinlik.Category</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

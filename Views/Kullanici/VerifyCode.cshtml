@@ -1,0 +1,15 @@
+<h2>Doğrulama Kodu</h2>
+<p>Lütfen e-posta adresinize gönderilen doğrulama kodunu girin.</p>
+
+<form asp-action="VerifyCode" method="post">
+    <div class="form-group">
+        <label for="code">Doğrulama Kodu</label>
+        <input type="text" id="code" name="enteredCode" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Onayla</button>
+</form>
+
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <div class="alert alert-danger mt-3">@ViewBag.ErrorMessage</div>
+}

@@ -1,0 +1,36 @@
+@model DashBoardWebApp.Models.Etkinlik
+
+<h2>Etkinlik Düzenle</h2>
+
+<form asp-action="EditEvent" method="post">
+    <div class="form-group">
+        <label for="EventName">Etkinlik Adı</label>
+        <input type="text" id="EventName" name="EventName" class="form-control" value="@Model.EventName" required />
+    </div>
+    <div class="form-group">
+        <label for="Date">Tarih</label>
+        <input type="date" id="Date" name="Date" class="form-control" value="@Model.Date.ToString("yyyy-MM-dd")" required />
+    </div>
+    <div class="form-group">
+        <label for="Time">Saat</label>
+        <input type="time" id="Time" name="Time" class="form-control" value="@Model.Time.ToString(@"hh\:mm")" required />
+    </div>
+    <div class="form-group">
+        <label for="Duration">Süre (dakika)</label>
+        <input type="number" id="Duration" name="Duration" class="form-control" value="@Model.Duration" />
+    </div>
+    <div class="form-group">
+        <label for="Location">Konum</label>
+        <input type="text" id="Location" name="Location" class="form-control" value="@Model.Location" />
+    </div>
+    <div class="form-group">
+        <label for="Category">Kategori</label>
+        <input type="text" id="Category" name="Category" class="form-control" value="@Model.Category" />
+    </div>
+    <div class="form-group">
+        <label for="Description">Açıklama</label>
+        <textarea id="Description" name="Description" class="form-control">@Model.Description</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Kaydet</button>
+    <a href="@Url.Action("MyEvents", "Event")" class="btn btn-secondary mt-3">İptal</a>
+</form>

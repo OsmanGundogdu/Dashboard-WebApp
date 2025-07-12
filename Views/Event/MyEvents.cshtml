@@ -1,0 +1,46 @@
+@model IEnumerable<DashBoardWebApp.Models.Etkinlik>
+
+<h2>Etkinliklerim</h2>
+
+@if (!Model.Any())
+{
+    <p>Hiç etkinliğiniz bulunmamaktadır. Hemen bir etkinlik oluşturun!</p>
+    <a href="@Url.Action("CreateEvent", "Event")" class="btn btn-primary">Etkinlik Oluştur</a>
+}
+else
+{
+    <a href="@Url.Action("CreateEvent", "Event")" class="btn btn-primary mb-3">Yeni Etkinlik Oluştur</a>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Tarih</th>
+                <th>Saat</th>
+                <th>Konum</th>
+                <th>Kategori</th>
+                <th>Onay Durumu</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var etkinlik in Model)
+            {
+                <tr>
+                    <td>@etkinlik.EventName</td>
+                    <td>@etkinlik.Date.ToString("yyyy-MM-dd")</td>
+                    <td>@etkinlik.Time.ToString(@"hh\:mm")</td>
+                    <td>@etkinlik.Location</td>
+                    <td>@etkinlik.Category</td>
+                    <td style="text-align: center; background-color: @(etkinlik.IsApproved ? "#d4edda" : "#f8d7da"); color: @(etkinlik.IsApproved ? "#155724" : "#721c24"); font-weight: bold;">
+                        @(etkinlik.IsApproved ? "Onaylandı" : "Onaylanmadı")
+                    </td>
+                    <td>
+                        <a href="@Url.Action("EditEvent", "Event", new { id = etkinlik.ID })" class="btn btn-sm btn-warning">Düzenle</a>
+                        <a href="@Url.Action("DeleteEvent", "Event", new { id = etkinlik.ID })" class="btn btn-sm btn-danger">Sil</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

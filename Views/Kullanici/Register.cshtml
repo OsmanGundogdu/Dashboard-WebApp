@@ -1,0 +1,55 @@
+@model DashBoardWebApp.Models.Kullanici
+
+<h2>Yeni Kullanıcı Kaydı</h2>
+
+<form asp-action="Register" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="KullaniciAdi">Kullanıcı Adı</label>
+        <input type="text" class="form-control" id="KullaniciAdi" name="KullaniciAdi" required>
+    </div>
+    <div class="form-group">
+        <label for="Sifre">Şifre</label>
+        <input type="password" class="form-control" id="Sifre" name="Sifre" required>
+    </div>
+    <div class="form-group">
+        <label for="Eposta">E-posta</label>
+        <input type="email" class="form-control" id="Eposta" name="Eposta" required>
+    </div>
+    <div class="form-group">
+        <label for="Ad">Ad</label>
+        <input type="text" class="form-control" id="Ad" name="Ad" required>
+    </div>
+    <div class="form-group">
+        <label for="Soyad">Soyad</label>
+        <input type="text" class="form-control" id="Soyad" name="Soyad" required>
+    </div>
+    <div class="form-group">
+        <label for="Konum">Konum</label>
+        <input type="text" class="form-control" id="Konum" name="Konum">
+    </div>
+    <div class="form-group">
+        <label for="IlgiAlanlari">İlgi Alanları</label>
+        <input type="text" class="form-control" id="IlgiAlanlari" name="IlgiAlanlari">
+    </div>
+    <div class="form-group">
+        <label for="DogumTarihi">Doğum Tarihi</label>
+        <input type="date" class="form-control" id="DogumTarihi" name="DogumTarihi">
+    </div>
+    <div class="form-group">
+        <label for="Cinsiyet">Cinsiyet</label>
+        <select class="form-control" id="Cinsiyet" name="Cinsiyet">
+            <option value="Erkek">Erkek</option>
+            <option value="Kadın">Kadın</option>
+            <option value="Diğer">Diğer</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="TelefonNumarasi">Telefon Numarası</label>
+        <input type="tel" class="form-control" id="TelefonNumarasi" name="TelefonNumarasi">
+    </div>
+    <div class="form-group">
+        <label for="ProfilFotografi">Profil Fotoğrafı</label>
+        <input type="file" class="form-control" id="ProfilFotografi" name="ProfilFotografi" />
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Kayıt Ol</button>
+</form>

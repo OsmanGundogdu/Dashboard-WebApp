@@ -1,0 +1,23 @@
+@model IEnumerable<DashBoardWebApp.Models.Message>
+
+<h2>Gelen Mesajlar</h2>
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th>Gönderen</th>
+            <th>Mesaj</th>
+            <th>Gönderim Tarihi</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var message in Model)
+        {
+            <tr>
+                <td>@message.SenderID</td> <!-- SenderID yerine gönderen adı eklenebilir -->
+                <td>@message.MessageText</td>
+                <td>@message.SentTime.ToString("yyyy-MM-dd HH:mm")</td>
+            </tr>
+        }
+    </tbody>
+</table>

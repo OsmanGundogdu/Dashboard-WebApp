@@ -1,0 +1,21 @@
+@model IEnumerable<DashBoardWebApp.Models.Score>
+
+<h2>Puanlarım</h2>
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th>Puan</th>
+            <th>Kazanım Tarihi</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var score in Model)
+        {
+            <tr>
+                <td>@score.Points</td>
+                <td>@score.EarnedDate.ToString("yyyy-MM-dd")</td>
+            </tr>
+        }
+    </tbody>
+</table>

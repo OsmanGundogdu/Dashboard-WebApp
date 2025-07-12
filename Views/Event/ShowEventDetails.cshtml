@@ -1,0 +1,98 @@
+@* @model DashBoardWebApp.Models.EventDetailsViewModel
+
+<h2>Etkinlik Detayları</h2>
+<div class="card mt-3">
+    <div class="row">
+        <div class="card-body col-md-4 mt-3" style="margin-left: 20px;">
+            <h5 class="card-title">@Model.EventDetails.EventName</h5>
+            <p><strong>Açıklama:</strong> @Model.EventDetails.Description</p>
+            <p><strong>Tarih:</strong> @Model.EventDetails.Date.ToString("yyyy-MM-dd")</p>
+            <p><strong>Saat:</strong> @Model.EventDetails.Time.ToString(@"hh\:mm")</p>
+            <p><strong>Konum:</strong> @Model.EventDetails.Location</p>
+            <p><strong>Kategori:</strong> @Model.EventDetails.Category</p>
+            <p><strong>Süre:</strong> @Model.EventDetails.Duration dakika</p>
+        </div>
+        <div class="card-body col-md-6">
+            <h5 class="mt-4">Etkinliği Düzenleyen Kişi</h5>
+            <div class="row">
+                <div class="col-md-3" style="align-items: center;">
+                    @if (!string.IsNullOrEmpty(Model.EventCreator.ProfilFotografi))
+                    {
+                        <img src="@Model.EventCreator.ProfilFotografi" alt="Profil Fotoğrafı" class="img-fluid rounded-circle" style="width: 200px; height: 200px; margin-top: 25px;; margin-left: 25px;">
+                    }
+                    else
+                    {
+                        <img src="https://via.placeholder.com/150" alt="Profil Fotoğrafı" class="img-fluid rounded-circle" style="width: 200px; height: 200px; margin-top: 25px;; margin-left: 25px;">
+                    }
+                </div>
+                <div class="col-md-5" style="margin-left: 70px;">
+                    <p><strong>Ad:</strong> @Model.EventCreator.Ad @Model.EventCreator.Soyad</p>
+                    <p><strong>E-posta:</strong> @Model.EventCreator.Eposta</p>
+                    <p><strong>Konum:</strong> @Model.EventCreator.Konum</p>
+                    <p><strong>İlgi Alanları:</strong> @Model.EventCreator.IlgiAlanlari</p>
+                    <p><strong>Doğum Tarihi:</strong> @Model.EventCreator.DogumTarihi</p>
+                    <p><strong>Cinsiyet:</strong> @Model.EventCreator.Cinsiyet</p>
+                </div> 
+            </div>
+               
+        </div>
+    </div>
+</div>
+
+
+
+
+<a href="@Url.Action("GeneralEvents", "Event")" class="btn btn-primary mt-4">Geri Dön</a> *@
+
+
+
+@model DashBoardWebApp.Models.EventDetailsViewModel
+
+<h2>@Model.EventDetails.EventName</h2>
+<p><strong>Tarih:</strong> @Model.EventDetails.Date.ToString("yyyy-MM-dd")</p>
+<p><strong>Saat:</strong> @Model.EventDetails.Time.ToString(@"hh\:mm")</p>
+<p><strong>Açıklama:</strong> @Model.EventDetails.Description</p>
+<p><strong>Konum:</strong> @Model.EventDetails.Location</p>
+<p><strong>Oluşturan:</strong> @Model.EventCreator.Ad (@Model.EventCreator.Soyad)</p>
+
+<div id="map" style="height: 400px; width: 100%;"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ_9NCQrrgo2S8vvjRgPeRPj0qqit2jTM"></script>
+<script>
+    function initMap() {
+        // Geocoding API ile adresi enlem ve boylama çevir
+        const geocoder = new google.maps.Geocoder();
+        const address = "@Model.EventDetails.Location"; // Etkinlik konumu
+
+        geocoder.geocode({ address: address }, function(results, status) {
+            if (status === "OK") {
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 14,
+                    center: results[0].geometry.location, // Konuma göre merkezi ayarla
+                });
+
+                const marker = new google.maps.Marker({
+                    position: results[0].geometry.location, // Marker konumu
+                    map: map,
+                    title: "@Model.EventDetails.EventName",
+                });
+
+                const infoWindow = new google.maps.InfoWindow({
+                    content: `<h5>@Model.EventDetails.EventName</h5>
+                              <p><strong>Tarih:</strong> @Model.EventDetails.Date.ToString("yyyy-MM-dd")<br>
+                              <strong>Saat:</strong> @Model.EventDetails.Time.ToString(@"hh\:mm")<br>
+                              <strong>Açıklama:</strong> @Model.EventDetails.Description</p>`,
+                });
+
+                marker.addListener("click", () => {
+                    infoWindow.open(map, marker);
+                });
+            } else {
+                console.error("Geocoding API Hatası: " + status);
+                alert("Konum bulunamadı: " + address);
+            }
+        });
+    }
+
+    window.onload = initMap;
+</script>

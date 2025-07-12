@@ -1,0 +1,15 @@
+@model DashBoardWebApp.Models.Score
+
+<h2>Yeni Puan Ekle</h2>
+
+<form asp-action="AddScore" method="post">
+    <div class="form-group">
+        <label for="UserID">Kullanıcı ID</label>
+        <input type="number" class="form-control" id="UserID" name="UserID" required>
+    </div>
+    <div class="form-group">
+        <label for="Points">Puan</label>
+        <input type="number" class="form-control" id="Points" name="Points" required>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Puan Ekle</button>
+</form>

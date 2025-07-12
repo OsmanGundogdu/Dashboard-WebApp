@@ -1,0 +1,48 @@
+@model DashBoardWebApp.Models.Kullanici
+
+<h2>Profil Güncelle</h2>
+
+<form asp-action="EditProfile" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="email">E-posta</label>
+        <input type="email" id="email" name="Eposta" class="form-control" value="@Model.Eposta" required />
+    </div>
+    <div class="form-group">
+        <label for="konum">Konum</label>
+        <input type="text" id="konum" name="Konum" class="form-control" value="@Model.Konum" required />
+    </div>
+    <div class="form-group">
+        <label for="ilgiAlanlari">İlgi Alanları</label>
+        <textarea id="ilgiAlanlari" name="IlgiAlanlari" class="form-control" required>@Model.IlgiAlanlari</textarea>
+    </div>
+    <div class="form-group">
+        <label for="ad">Ad</label>
+        <input type="text" id="ad" name="Ad" class="form-control" value="@Model.Ad" required />
+    </div>
+    <div class="form-group">
+        <label for="soyad">Soyad</label>
+        <input type="text" id="soyad" name="Soyad" class="form-control" value="@Model.Soyad" required />
+    </div>
+    <div class="form-group">
+        <label for="dogumTarihi">Doğum Tarihi</label>
+        <input type="date" id="dogumTarihi" name="DogumTarihi" class="form-control" value="@Model.DogumTarihi?.ToString("yyyy-MM-dd")" />
+    </div>
+    <div class="form-group">
+        <label for="cinsiyet">Cinsiyet</label>
+        <select id="cinsiyet" name="Cinsiyet" class="form-control">
+            <option value="Erkek" selected="@(Model.Cinsiyet == "Erkek" ? "selected" : null)">Erkek</option>
+            <option value="Kadın" selected="@(Model.Cinsiyet == "Kadın" ? "selected" : null)">Kadın</option>
+            <option value="Diğer" selected="@(Model.Cinsiyet == "Diğer" ? "selected" : null)">Diğer</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="telefonNumarasi">Telefon Numarası</label>
+        <input type="text" id="telefonNumarasi" name="TelefonNumarasi" class="form-control" value="@Model.TelefonNumarasi" required />
+    </div>
+    <div class="form-group">
+        <label for="profilFotografi">Profil Fotoğrafı</label>
+        <input type="file" id="profilFotografi" name="ProfilFotografi" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Profili Güncelle</button>
+</form>
